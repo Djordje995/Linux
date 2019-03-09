@@ -1,0 +1,67 @@
+Debian post installation
+
+1) sudo konfiguracija
+$ su   <root acces>
+$ nano /etc/sudores
+-----------------------
+###################################################################################################################
+#SUDORES FILE
+# This file MUST be edited with the 'visudo' command as root.
+#
+# Please consider adding local content in /etc/sudoers.d/ instead of
+# directly modifying this file.
+#
+# See the man page for details on how to write a sudoers file.
+#
+Defaults	env_reset
+Defaults	mail_badpass
+Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# User privilege specification
+root	ALL=(ALL:ALL) ALL
+
+# Allow members of group sudo to execute any command
+%sudo	ALL=(ALL:ALL) ALL
+username    ALL=(ALL:ALL) ALL  #<Dodaj usename>
+# See sudoers(5) for more information on "#include" directives:
+
+#includedir /etc/sudoers.d
+#dodaj svoj username na liniju br 30.
+# ctrl+o sacuvaj
+# ctrl+x izadji
+###################################################################################################################
+
+###################################################################################################################
+
+2) Konfiguracija source liste
+$ sudo nano /etc/apt/source.list
+---------------------------------
+
+# 
+
+# deb cdrom:[Debian GNU/Linux 9.1.0 _Stretch_ - Official amd64 NETINST 20170722-11:28]/ stretch main
+
+# deb cdrom:[Debian GNU/Linux 9.1.0 _Stretch_ - Official amd64 NETINST 20170722-11:28]/ stretch main
+
+deb http://ftp.us.debian.org/debian/ stretch main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ stretch main
+
+deb http://security.debian.org/debian-security stretch/updates main contrib non-free
+deb-src http://security.debian.org/debian-security stretch/updates main
+
+# stretch-updates, previously known as 'volatile'
+deb http://ftp.us.debian.org/debian/ stretch-updates main contrib non-free
+
+# Na svaku liniju dodaj <contrib non-free>
+
+##################################################################################################################
+
+$ sudo apt update
+$ sudo apt dist-upgrade
+$ sudo apt install gedit, vim, net-tools, git, chromium
