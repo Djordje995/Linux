@@ -1,0 +1,28 @@
+Debian strech 9.x post installation
+
+1. sudo postavke
+- Konfiguracija sudores fajla
+$ su   <root sifra>
+# apt install -y sudo
+$ nano /etc/sudores
+- Pogledaj primer
+
+2. Konfiguracija source.list fajla 
+$ sudo nano /etc/apt/source.list
+- Izmeniti fajl 
+- Pogledaj primer
+
+3. Update i upgrade
+$ sudo apt update -y
+$ sudo apt dist-upgrade -y
+
+4. Firewall setup
+$ sudo apt install -y ufw
+$ sudo ufw status
+$ sudo ufw enable
+
+4. instalacija osnovnog softvera
+$ sudo apt install -y gedit
+$ sudo apt install -y net-tools
+$ sudo apt install -y chromium
+$ sudo apt install -y vim, emasc, git
