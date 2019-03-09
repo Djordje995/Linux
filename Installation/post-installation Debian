@@ -1,12 +1,12 @@
 Debian strech 9.x post installation
 
-1. sudo confuguration
+1. Configure sudo
 $ su   <root passwd>
 # apt install -y sudo
 $ nano /etc/sudores
 
 
-2. Konfiguracija source.list fajla 
+2. Configure source.list file
 $ sudo nano /etc/apt/source.list
 
 3. Update and upgrade
