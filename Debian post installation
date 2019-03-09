@@ -27,13 +27,13 @@ root	ALL=(ALL:ALL) ALL
 
 # Allow members of group sudo to execute any command
 %sudo	ALL=(ALL:ALL) ALL
-username    ALL=(ALL:ALL) ALL  #<Dodaj usename>
+username    ALL=(ALL:ALL) ALL  #<Add username>
 # See sudoers(5) for more information on "#include" directives:
 
 #includedir /etc/sudoers.d
-#dodaj svoj username na liniju br 30.
-# ctrl+o sacuvaj
-# ctrl+x izadji
+# Add your username on line br 30.
+# ctrl+o save
+# ctrl+x exit
 ###################################################################################################################
 
 ###################################################################################################################
